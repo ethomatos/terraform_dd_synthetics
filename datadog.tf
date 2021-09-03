@@ -24,10 +24,11 @@ resource "datadog_synthetics_test" "bu1_api_perf_test" {
 			count		= 2
 			interval = 300
 		}
+		monitor_name = "Perf Test BU1 App${count.index}"
 	}
-	name		= "API Perf Test BU1 ${count.index}"
+	name		= "Perf Test BU1 App${count.index}"
 	message = "This is only a test"
-	tags		= ["owner:et", "bu:bu1", "type:performance", "app:app${count.index}"]
+	tags		= ["owner:et", "project:broadridge_synthetics", "bu:bu1", "mtype:performance", "app:app${count.index}"]
 
 	status = "live"
 }
@@ -52,10 +53,11 @@ resource "datadog_synthetics_test" "bu1_api_avail_test" {
 			count		= 2
 			interval = 300
 		}
+		monitor_name = "Avail Test BU1 App${count.index}"
 	}
-	name		= "API Avail Test BU1 ${count.index}"
+	name		= "Avail Test BU1 App${count.index}"
 	message = "This is only a test"
-	tags		= ["owner:et", "bu:bu1", "type:availability", "app:app${count.index}"]
+	tags		= ["owner:et", "bu:bu1", "mtype:availability", "project:broadridge_synthetics", "app:app${count.index}"]
 
 	status = "live"
 }
@@ -85,10 +87,11 @@ resource "datadog_synthetics_test" "bu2_api_perf_test" {
 			count		= 2
 			interval = 300
 		}
+		monitor_name		= "Perf Test BU2 App${count.index}"
 	}
-	name		= "API Perf Test BU2 ${count.index}"
+	name		= "Perf Test BU2 App${count.index}"
 	message = "This is only a test"
-	tags		= ["owner:et", "bu:bu2", "type:performance", "app:app${count.index}"]
+	tags		= ["owner:et", "bu:bu2", "mtype:performance", "project:broadridge_synthetics", "app:app${count.index}"]
 
 	status = "live"
 }
@@ -113,15 +116,16 @@ resource "datadog_synthetics_test" "bu2_api_avail_test" {
 			count		= 2
 			interval = 300
 		}
+		monitor_name		= "Avail Test BU2 App${count.index}"
 	}
-	name		= "API Avail Test BU2 ${count.index}"
+	name		= "Avail Test BU2 App${count.index}"
 	message = "This is only a test"
-	tags		= ["owner:et", "bu:bu2", "type:availability", "app:app${count.index}"]
+	tags		= ["owner:et", "bu:bu2", "mtype:availability", "project:broadridge_synthetics", "app:app${count.index}"]
 
 	status = "live"
 }
 resource "datadog_synthetics_test" "bu3_api_avail_test" {
-	count = 1
+	count = 3
 	type		= "api"
 	subtype = "http"
 	request_definition {
@@ -141,15 +145,16 @@ resource "datadog_synthetics_test" "bu3_api_avail_test" {
 			count		= 2
 			interval = 300
 		}
+		monitor_name		= "Avail Test BU3 App${count.index}"
 	}
-	name		= "API Avail Test BU3 ${count.index}"
+	name		= "Avail Test BU3 App${count.index}"
 	message = "This is only a test"
-	tags		= ["owner:et", "bu:bu3", "type:availability", "app:app${count.index}"]
+	tags		= ["owner:et", "bu:bu3", "mtype:availability", "project:broadridge_synthetics", "app:app${count.index}"]
 
 	status = "live"
 }
 resource "datadog_synthetics_test" "bu3_api_perf_test" {
-	count = 1
+	count = 3
 	type		= "api"
 	subtype = "http"
 	request_definition {
@@ -174,10 +179,11 @@ resource "datadog_synthetics_test" "bu3_api_perf_test" {
 			count		= 2
 			interval = 300
 		}
+		monitor_name		= "Perf Test BU3 App${count.index}"
 	}
-	name		= "API Perf Test BU3 ${count.index}"
+	name		= "Perf Test BU3 App${count.index}"
 	message = "This is only a test"
-	tags		= ["owner:et", "bu:bu3", "type:performance", "app:app${count.index}"]
+	tags		= ["owner:et", "bu:bu3", "mtype:performance", "project:broadridge_synthetics", "app:app${count.index}"]
 
 	status = "live"
 }

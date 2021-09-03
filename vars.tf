@@ -26,6 +26,8 @@ variable "bu2_urls" {
 variable "bu3_urls" {
 	type = list(string)
 	default = [
-		"https://www.broadridge.com/consulting-services/"
+		"https://www.broadridge.com/customer-communications/telecom/",
+		"https://www.broadridge.com/customer-communications/utilities/",
+		"https://www.broadridge.com/financial-services/wealth-management/"
 	]
 }
