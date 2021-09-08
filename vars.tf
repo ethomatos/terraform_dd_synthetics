@@ -12,6 +12,7 @@ variable "bu1_urls" {
 	default = [
 		"https://www.broadridge.com/financial-services/asset-management/",
 		"https://www.broadridge.com/financial-services/capital-markets/",
+		"https://www.broadridge.com/financial-services/wealth-management/",
 		"https://www.broadridge.com/financial-services/wealth-management/"
 	]
 }

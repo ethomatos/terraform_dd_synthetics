@@ -1,5 +1,6 @@
 resource "datadog_synthetics_test" "bu1_api_perf_test" {
-	count = 3
+	// Creates multiple bu1 synthetic api tests based on the number of URLs to test
+	count = length(var.bu1_urls)
 	type		= "api"
 	subtype = "http"
 	request_definition {
@@ -33,7 +34,7 @@ resource "datadog_synthetics_test" "bu1_api_perf_test" {
 	status = "live"
 }
 resource "datadog_synthetics_test" "bu1_api_avail_test" {
-	count = 3
+	count = length(var.bu1_urls)
 	type		= "api"
 	subtype = "http"
 	request_definition {
@@ -62,7 +63,7 @@ resource "datadog_synthetics_test" "bu1_api_avail_test" {
 	status = "live"
 }
 resource "datadog_synthetics_test" "bu2_api_perf_test" {
-	count = 3
+	count = length(var.bu2_urls)
 	type		= "api"
 	subtype = "http"
 	request_definition {
@@ -96,7 +97,7 @@ resource "datadog_synthetics_test" "bu2_api_perf_test" {
 	status = "live"
 }
 resource "datadog_synthetics_test" "bu2_api_avail_test" {
-	count = 3
+	count = length(var.bu2_urls)
 	type		= "api"
 	subtype = "http"
 	request_definition {
@@ -125,7 +126,7 @@ resource "datadog_synthetics_test" "bu2_api_avail_test" {
 	status = "live"
 }
 resource "datadog_synthetics_test" "bu3_api_avail_test" {
-	count = 3
+	count = length(var.bu3_urls)
 	type		= "api"
 	subtype = "http"
 	request_definition {
@@ -154,7 +155,7 @@ resource "datadog_synthetics_test" "bu3_api_avail_test" {
 	status = "live"
 }
 resource "datadog_synthetics_test" "bu3_api_perf_test" {
-	count = 3
+	count = length(var.bu3_urls)
 	type		= "api"
 	subtype = "http"
 	request_definition {
