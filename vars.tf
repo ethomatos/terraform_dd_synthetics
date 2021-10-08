@@ -15,6 +15,7 @@ variable "bu1_urls" {
 		"https://www.broadridge.com/financial-services/wealth-management/"
 	]
 }
+
 variable "bu2_urls" {
 	type = list(string)
 	default = [
