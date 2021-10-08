@@ -24,6 +24,7 @@ variable "bu2_urls" {
 		"https://www.broadridge.com/customer-communications/retail-banking/"
 	]
 }
+
 variable "bu3_urls" {
 	type = list(string)
 	default = [
